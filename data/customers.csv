@@ -1,0 +1,11 @@
+Customer_ID,Name,Age,Gender,Segment,City,Last_Purchase_Days,Total_Spend,Preferred_Channel,Last_Active_Days,Loyalty_Score
+1001,Rahul Sharma,24,Male,Student,Delhi,95,8500,Email,20,45
+1002,Priya Patel,31,Female,Premium,Mumbai,8,64000,WhatsApp,2,95
+1003,Aman Verma,40,Male,Regular,Bangalore,120,17000,SMS,45,58
+1004,Neha Gupta,28,Female,Premium,Pune,3,98000,Push Notification,1,99
+1005,Rohan Singh,35,Male,Regular,Hyderabad,60,25000,WhatsApp,15,71
+1006,Sneha Kapoor,22,Female,Student,Chandigarh,140,6000,Email,55,34
+1007,Arjun Nair,29,Male,Premium,Kochi,10,85000,Push Notification,3,93
+1008,Kavya Iyer,26,Female,Regular,Chennai,45,32000,WhatsApp,10,74
+1009,Vikram Joshi,38,Male,Loyal,Ahmedabad,6,150000,Email,2,100
+1010,Ananya Roy,27,Female,Premium,Kolkata,15,72000,Push Notification,4,92
