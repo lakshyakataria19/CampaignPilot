@@ -4,6 +4,10 @@ import pandas as pd
 from agents.planner import PlannerAgent
 from agents.copywriter import CopywriterAgent
 
+# ----------------------------------------------------
+# Page Configuration
+# ----------------------------------------------------
+
 st.set_page_config(
     page_title="CampaignPilot AI",
     page_icon="🚀",
@@ -11,9 +15,39 @@ st.set_page_config(
 )
 
 st.title("🚀 CampaignPilot AI")
-st.subheader("AI Powered Customer Engagement Platform")
+st.caption("AI-Powered Customer Engagement Platform | Multi-Agent Marketing Automation")
+
+st.divider()
+
+# ----------------------------------------------------
+# Load Customer Data
+# ----------------------------------------------------
 
 customers = pd.read_csv("data/customers.csv")
+
+# ----------------------------------------------------
+# Dashboard KPIs
+# ----------------------------------------------------
+
+total_customers = len(customers)
+avg_spend = int(customers["Total_Spend"].mean())
+avg_loyalty = round(customers["Loyalty_Score"].mean(), 1)
+high_risk = len(customers[customers["Loyalty_Score"] < 50])
+
+st.subheader("📊 Dashboard Overview")
+
+k1, k2, k3, k4 = st.columns(4)
+
+k1.metric("👥 Customers", total_customers)
+k2.metric("💰 Avg Spend", f"₹{avg_spend:,}")
+k3.metric("⭐ Avg Loyalty", avg_loyalty)
+k4.metric("⚠️ High Risk", high_risk)
+
+st.divider()
+
+# ----------------------------------------------------
+# Customer Selection
+# ----------------------------------------------------
 
 customer_name = st.selectbox(
     "Select Customer",
@@ -22,54 +56,129 @@ customer_name = st.selectbox(
 
 customer = customers[customers["Name"] == customer_name].iloc[0]
 
-st.divider()
-
-col1, col2 = st.columns(2)
-
-with col1:
-
-    st.subheader("Customer Profile")
-
-    st.write(f"**Name:** {customer['Name']}")
-    st.write(f"**Age:** {customer['Age']}")
-    st.write(f"**Segment:** {customer['Segment']}")
-    st.write(f"**City:** {customer['City']}")
-    st.write(f"**Total Spend:** ₹{customer['Total_Spend']}")
-    st.write(f"**Preferred Channel:** {customer['Preferred_Channel']}")
-
 planner = PlannerAgent()
 copywriter = CopywriterAgent()
 
-if st.button("🚀 Generate Campaign"):
+left, right = st.columns(2)
 
-    with st.spinner("Planner Agent Thinking..."):
+# ----------------------------------------------------
+# Customer Profile
+# ----------------------------------------------------
 
+with left:
+
+    with st.container(border=True):
+
+        st.subheader("👤 Customer Profile")
+
+        c1, c2 = st.columns(2)
+
+        with c1:
+            st.write(f"**Name**")
+            st.write(customer["Name"])
+
+            st.write(f"**Age**")
+            st.write(customer["Age"])
+
+            st.write(f"**Gender**")
+            st.write(customer["Gender"])
+
+            st.write(f"**City**")
+            st.write(customer["City"])
+
+        with c2:
+            st.write(f"**Segment**")
+            st.write(customer["Segment"])
+
+            st.write(f"**Spend**")
+            st.write(f"₹{customer['Total_Spend']:,}")
+
+            st.write(f"**Loyalty Score**")
+            st.write(customer["Loyalty_Score"])
+
+            st.write(f"**Preferred Channel**")
+            st.write(customer["Preferred_Channel"])
+
+# ----------------------------------------------------
+# Generate Campaign
+# ----------------------------------------------------
+
+if st.button("🚀 Generate AI Campaign", use_container_width=True):
+
+    with st.spinner("🧠 Planner Agent Thinking..."):
         strategy = planner.run(customer)
 
-    with st.spinner("Copywriter Agent Writing..."):
-
+    with st.spinner("✍️ Copywriter Agent Writing..."):
         campaign = copywriter.run(customer, strategy)
 
-    with col2:
+    # ---------------------------------------------
+    # AI Strategy Card
+    # ---------------------------------------------
 
-        st.subheader("AI Strategy")
+    with right:
 
-        st.json(strategy)
+        with st.container(border=True):
+
+            st.subheader("🧠 AI Strategy")
+
+            st.markdown(f"""
+**🎯 Goal**
+
+{strategy["goal"]}
+
+---
+
+**🎁 Offer**
+
+{strategy["offer"]}
+
+---
+
+**🎨 Tone**
+
+{strategy["tone"]}
+
+---
+
+**📩 Channel**
+
+{strategy["channel"]}
+
+---
+
+**👉 CTA**
+
+{strategy["cta"]}
+""")
 
     st.divider()
 
-    st.subheader("📧 Email")
+    # ---------------------------------------------
+    # Campaign Output
+    # ---------------------------------------------
 
-    st.write(campaign["email"])
+    tab1, tab2, tab3 = st.tabs(
+        [
+            "📧 Email",
+            "💬 WhatsApp",
+            "📱 Push Notification"
+        ]
+    )
 
-    st.divider()
+    with tab1:
 
-    st.subheader("💬 WhatsApp")
+        with st.container(border=True):
+            st.subheader("📧 Email Campaign")
+            st.write(campaign["email"])
 
-    st.write(campaign["whatsapp"])
+    with tab2:
 
-    st.divider()
+        with st.container(border=True):
+            st.subheader("💬 WhatsApp Campaign")
+            st.write(campaign["whatsapp"])
 
-    st.subheader("📱 Push Notification")
+    with tab3:
 
-    st.write(campaign["push"])
+        with st.container(border=True):
+            st.subheader("📱 Push Notification")
+            st.write(campaign["push"])

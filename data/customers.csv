@@ -1,11 +1,51 @@
 Customer_ID,Name,Age,Gender,Segment,City,Last_Purchase_Days,Total_Spend,Preferred_Channel,Last_Active_Days,Loyalty_Score
 1001,Rahul Sharma,24,Male,Student,Delhi,95,8500,Email,20,45
-1002,Priya Patel,31,Female,Premium,Mumbai,8,64000,WhatsApp,2,95
-1003,Aman Verma,40,Male,Regular,Bangalore,120,17000,SMS,45,58
-1004,Neha Gupta,28,Female,Premium,Pune,3,98000,Push Notification,1,99
-1005,Rohan Singh,35,Male,Regular,Hyderabad,60,25000,WhatsApp,15,71
-1006,Sneha Kapoor,22,Female,Student,Chandigarh,140,6000,Email,55,34
-1007,Arjun Nair,29,Male,Premium,Kochi,10,85000,Push Notification,3,93
-1008,Kavya Iyer,26,Female,Regular,Chennai,45,32000,WhatsApp,10,74
-1009,Vikram Joshi,38,Male,Loyal,Ahmedabad,6,150000,Email,2,100
-1010,Ananya Roy,27,Female,Premium,Kolkata,15,72000,Push Notification,4,92
+1002,Ananya Patel,28,Female,Professional,Mumbai,12,32500,WhatsApp,2,88
+1003,Rohan Gupta,35,Male,Premium,Bengaluru,5,84500,Email,1,96
+1004,Priya Verma,31,Female,Frequent Buyer,Pune,18,42500,Push Notification,3,81
+1005,Aman Singh,22,Male,Student,Jaipur,60,9200,WhatsApp,15,52
+1006,Sneha Nair,27,Female,Professional,Kochi,8,37800,Email,2,90
+1007,Karan Mehta,40,Male,High Value,Ahmedabad,4,135000,Email,1,98
+1008,Neha Kapoor,30,Female,Premium,Gurugram,20,61200,Push Notification,4,84
+1009,Vikas Yadav,26,Male,Professional,Noida,45,28000,WhatsApp,10,65
+1010,Aisha Khan,25,Female,Student,Hyderabad,80,10500,Email,18,49
+1011,Arjun Rao,37,Male,High Value,Chennai,6,115000,Email,2,94
+1012,Kriti Sharma,29,Female,Professional,Pune,25,45200,Push Notification,6,79
+1013,Harsh Jain,33,Male,Premium,Indore,15,56200,Email,3,86
+1014,Ishita Das,24,Female,Student,Kolkata,72,9600,WhatsApp,14,47
+1015,Dev Malhotra,38,Male,Frequent Buyer,Mumbai,9,73500,Email,2,91
+1016,Pooja Reddy,27,Female,Professional,Hyderabad,32,36500,Push Notification,7,73
+1017,Yash Agarwal,29,Male,Premium,Delhi,11,68400,Email,2,89
+1018,Nikita Joshi,34,Female,High Value,Bengaluru,3,152000,Email,1,99
+1019,Aditya Kulkarni,26,Male,Professional,Pune,55,25500,WhatsApp,12,61
+1020,Simran Kaur,23,Female,Student,Chandigarh,88,7200,Push Notification,20,42
+1021,Ritesh Sharma,36,Male,Premium,Lucknow,14,58400,Email,3,83
+1022,Megha Gupta,31,Female,Professional,Noida,19,47200,WhatsApp,5,80
+1023,Sachin Verma,42,Male,High Value,Delhi,2,165000,Email,1,100
+1024,Tanya Arora,28,Female,Frequent Buyer,Gurugram,10,68500,Push Notification,2,92
+1025,Akash Mishra,25,Male,Student,Varanasi,66,8100,Email,16,48
+1026,Riya Kapoor,30,Female,Premium,Mumbai,13,61500,WhatsApp,3,87
+1027,Mohit Bansal,34,Male,Professional,Jaipur,22,34800,Email,5,76
+1028,Sonal Desai,39,Female,High Value,Ahmedabad,7,124000,Push Notification,2,95
+1029,Abhishek Roy,27,Male,Professional,Kolkata,41,29800,Email,8,68
+1030,Divya Menon,32,Female,Premium,Kochi,17,64800,WhatsApp,4,85
+1031,Nitin Chawla,35,Male,Frequent Buyer,Delhi,28,51500,Email,6,78
+1032,Shreya Iyer,26,Female,Professional,Chennai,9,40500,Push Notification,2,88
+1033,Raj Malhotra,45,Male,High Value,Mumbai,1,182000,Email,1,100
+1034,Kavya Shah,29,Female,Premium,Surat,24,55600,WhatsApp,6,82
+1035,Ayush Srivastava,24,Male,Student,Lucknow,76,8900,Email,17,46
+1036,Nandini Bose,31,Female,Professional,Kolkata,16,43200,Push Notification,4,84
+1037,Manish Kumar,38,Male,Premium,Patna,30,59800,Email,7,75
+1038,Pallavi Rao,33,Female,Frequent Buyer,Bengaluru,12,71400,WhatsApp,3,90
+1039,Rohit Saxena,27,Male,Professional,Ghaziabad,48,28600,Push Notification,11,63
+1040,Shruti Jain,28,Female,Premium,Indore,18,64200,Email,5,86
+1041,Varun Sethi,41,Male,High Value,Gurugram,5,141000,Email,2,97
+1042,Sana Ali,25,Female,Student,Delhi,84,9800,WhatsApp,18,44
+1043,Kunal Joshi,36,Male,Professional,Pune,21,38800,Push Notification,6,77
+1044,Rhea Dutta,30,Female,Premium,Kolkata,14,60200,Email,3,88
+1045,Deepak Sharma,39,Male,Frequent Buyer,Noida,8,79200,WhatsApp,2,93
+1046,Aditi Mishra,27,Female,Professional,Jaipur,36,33600,Email,9,71
+1047,Siddharth Kapoor,34,Male,Premium,Chandigarh,11,66500,Push Notification,3,89
+1048,Anjali Nair,29,Female,Professional,Kochi,26,41200,Email,6,79
+1049,Vivek Anand,37,Male,High Value,Hyderabad,4,148000,Email,1,98
+1050,Muskan Arora,23,Female,Student,Delhi,92,7800,WhatsApp,21,41
